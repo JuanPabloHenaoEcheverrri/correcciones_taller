@@ -1,0 +1,89 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage{cite}
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+            
+        \Huge
+        \textbf{Taller memorias del computador}
+            
+        \vspace{0.5cm}
+        \LARGE
+        
+            
+        \vspace{1.5cm}
+            
+        \textbf{Juan Pablo Henao Echeverri}
+            
+        \vfill
+            
+        \vspace{0.8cm}
+            
+        \Large
+        Despartamento de Ingeniería Electrónica y Telecomunicaciones\\
+        Universidad de Antioquia\\
+        Medellín\\
+        Septiembre de 2020
+            
+    \end{center}
+\end{titlepage}
+
+\tableofcontents
+
+\section{Introducción}
+Como estudiantes de un curso de programación es muy importante el crear buenas bases teoricas, ya que esta nos permiten conocer el funcionamiento interno de las memorias a la hora de ejecutar un programa. La idea de este taller es hacer conciencia del uso de la memoria al crear programas, ya que al hacer un uso adecuado de estas hace que el programa sea mucho mas óptimo. 
+
+\section{Contenido} \label{contenido}
+
+\subsection{Memoria de computador}
+
+Una memorias cumplen un papel muy importante en un computador y su funcionamiento, ya que es el el dispositivio donde se alamacena temporalmente toda la información con la que trabajan los microprocesadores para procesarla y devolver los resultados que los usuarios requieren. \cite{taller} \\
+
+En terminos dela arquitectura de una memoria de computador se puede denominar como un conjunto de celdas junto con los circuitos asociados que se necesitan para ingresar y sacar información de almacenamiento. Una palabra de memoria es un grupo de 1 y 0, que pueder representar un número un codico de istrucción, uno o mas caracteres alfanúmericos, o cualquier otra información en código binario. \cite{ingenieu} \\
+
+\subsection{Tipo de memorias que conozco}
+\textbf{Memoria Rom:} Tambien conocida como memoria de solo lectura, es una memoria la cual almacena información pero esta no puede ser destruida ni reprogramable. \\
+
+\textbf{Memoria Ram:} A difrenecia de la memoria ROM, la información guardada en una memoria RAM se puede reeprogramar o reemplazar. Su función es la de almcenar instrucciones o datos, para evitar que estos tengan que pasar nuevamente por el procesador. \\
+
+\subsection{Como se gestiona la memoria en un computador.}
+Para entender como funciona una memoria, es importante usar la siguiente analogía: Hay que imaginar que un trabajador de realizar una serie de tareas contables. El cajon donde guardan todos los documentos podria ser el disco duro; los documentos son equivalentes a los datos y a la información a procesar; la mesa de trabajo o el escritorio donde se apilan dichos archivos sería el equivalente a la memoria donde se almacena temporalmente la información que se encuentra en procesamiento; mientras la persona seria el microprocesador que realiza diferentes tareas.
+\begin{itemize}
+    \item Primero se sacan del cajón (disco duro) los documentos administrativos y se les lleva a un escritorio (memoria) donde se apilan para poder trabajar.
+    \item Se toma el primer archivo de la pila para que el empleado (microprocesador) realice los calculos necesarios, así como otras tareas y finalmente se ingresen las modificaciones y los resultados de datos procesados en dicho documento.
+    \item Se regresa dicho documento procesado a otra parte del escritorio (memoria) donde se colocarán los documentos procesados.
+    \item Luego se toma otro documento no procesados y se repiten los dos pasos anteriores.Eso se reitera una y otra vez hasta que todos los documentos hayan sido procesados. 
+    \item Finalmente cuando se terminan de procesar todos los documentos, los cuales se encuentran apilados en la parte del escritorio (memoria) de documentos ya procesados, se toman y se vuelven a guardar en el cajón (disco duro) de almacenamiento de archivos. 
+  \end{itemize}  
+    Es importante recalcar que el archivo nunca se elimina del disco duro, simplemente se crea una copia en este, y despues es reemplazado por lo que haya en la memoria. \cite{taller}
+
+\subsection{¿Que hace que una memoria sea mas rápida que otra? ¿Por qué esto es importante?. }
+La memoria mas lenta es el disco duro, y su poca eficiencia se debe a la forma en la que se accede a la información, ya que este debe hacer girar sus discos para encontrarla. \\
+
+Despues está la memoria virtual, la cual es un poco mas rápida que el disco duro, ya que esta hace parte del disco duro, pero mantiene la información que no se está usando en un espacio, el cual al acceder a esta información, es mas rapido que el disco duro. \\
+
+Despues de esto se tiene la memoria RAM  que es mucho mas rapida que la memoria virtual y el disco duro debido a la forma como se almacena su información, ya que se hace en unas celdas donde almacenan los bits de información de forma aleatoria y esto hace que acceder a la información sea mucho mas directo.\\
+
+La memoria mas rapida que se tiene es la caché, ya que esta tiene la misma frecuencia que el microprocesador, y almacena su información en tres niveles dependiendo de la frecuencia que se accede a ella. En el nivel 1 es el mas rapido, ya que este se encuentra en el núcleo del microprocesador, el nivel 2 es mas lento que el anterior pero su capacidad es mayor y tambien se encuentra en el nucleo del microprocesador; y el nivel 3 es el mas lento pero el que mas capacidad tiene, y este nivel de la memoria caché es mas rapido que la memoria Ram.\\
+
+Esto es importante para conocer las jerarquias de la memoria, y que dependiendo del peso de un programa este se ejecuta mas rápido o mas lento, ya que de este depende en que memoria el microprocesador decide trabajar. Al ver lo anterior expuesto se ve la importancia que es el hacer programas eficientes que no derrochen espacio en la memoria.  
+
+\section{Conclusión} \label{conclulsion}
+\begin{itemize}
+    \item  Entre mas capacidad tiene la memoria mas lento es su funcionamiento.
+    \item La arquitectura de los computadores muestra de como se puede equilibrar dos variables importantes como son la eficiencia y el costo.
+    \item El procesador escoje la memoria que va a usar, dependien del tamaño del archivo.
+\end{itemize}
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}
